@@ -17,4 +17,4 @@ Part Database：
 
 armophous：Amorphous phase dataset
 
-Cr/Fe/fecr：bulk dataset
+cr/fe/fecr：bulk dataset
