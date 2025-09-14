@@ -2402,7 +2402,7 @@
          "limit_pref_v":      0.0
      },
       "training" : {
-         "stop_batch":    300000,
+         "stop_batch":       300000,
          "disp_file":        "lcurve.out",
          "disp_freq":        1000,
          "save_freq":        1000,
