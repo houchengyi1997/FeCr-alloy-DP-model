@@ -1,0 +1,37 @@
+# 系统信息
+SYSTEM  = FeCrNi_geometry_optimization_with_spin
+PREC    = MED      # 高精度计算
+
+# 初始电子密度设置
+ISTART  = 0             # 从头开始计算
+ICHARG  = 2             # 根据原子核电荷生成初始密度
+
+# 平面波基组和电子自洽收敛
+ENCUT   = 520           # 能量截断（单位 eV）
+EDIFF   = 1e-06         # 电子自洽收敛准则
+LREAL   = Auto       # 不使用实空间投影（适合小体系）
+ALGO    = Fast          # 快速电子自洽算法
+
+# 自旋极化设置（磁性相关）
+ISPIN   = 2             # 开启自旋极化
+
+# 几何优化设置
+ISYM = 0
+IBRION  = -1             # 准牛顿法，用于几何优化
+ISIF    = 2             # 优化原子位置和晶格参数，同时计算应力
+NSW     = 0           # 最大优化步数
+EDIFFG  = -0.01         # 几何优化的力收敛准则（单位 eV/Å）
+POTIM   = 0.2           # 离子运动步长
+
+# 电子态填充方式
+ISMEAR  = 1             # Methfessel-Paxton smearing，适用于金属
+SIGMA   = 0.1           # 展宽宽度
+
+# 输出控制
+LWAVE   = .FALSE.       # 不保存波函数文件
+LCHARG  = .FALSE.       # 不保存电荷密度文件
+
+# K 点设置
+KSPACING = 0.25         # K 点间距
+KGAMMA  = .FALSE.       # 不强制 Gamma 点布点
+
